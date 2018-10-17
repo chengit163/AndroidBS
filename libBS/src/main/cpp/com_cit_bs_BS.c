@@ -17,7 +17,7 @@ Java_com_cit_bs_BS_patch(JNIEnv *env, jobject thiz, jstring oldStr, jstring newS
     (*env)->ReleaseStringUTFChars(env, newStr, ch[2]);
     (*env)->ReleaseStringUTFChars(env, bsStr, ch[3]);
 
-    return 0 == ret ? JNI_TRUE : JNI_ERR;
+    return 0 == ret ? JNI_TRUE : JNI_FALSE;
 }
 
 JNIEXPORT jboolean JNICALL
@@ -35,6 +35,6 @@ Java_com_cit_bs_BS_diff(JNIEnv *env, jobject thiz, jstring oldStr, jstring newSt
     (*env)->ReleaseStringUTFChars(env, newStr, ch[2]);
     (*env)->ReleaseStringUTFChars(env, bsStr, ch[3]);
 
-    return 0 == ret ? JNI_TRUE : JNI_ERR;
+    return 0 == ret ? JNI_TRUE : JNI_FALSE;
 }
 
